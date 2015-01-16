@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1AACD34-B202-4E5B-BCF9-6526CFD96A77}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Derivadas</RootNamespace>
+    <AssemblyName>Derivadas</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Gradiente.cs" />
+    <Compile Include="DerivadaPrimeira.cs" />
+    <Compile Include="DerivadaSegunda.cs" />
+    <Compile Include="DerivadaTerceira.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="YAMP\AssemblyInfo.cs" />
+    <Compile Include="YAMP\Context.cs" />
+    <Compile Include="YAMP\Exceptions\ArgumentException.cs" />
+    <Compile Include="YAMP\Exceptions\ArgumentsException.cs" />
+    <Compile Include="YAMP\Exceptions\AssignmentException.cs" />
+    <Compile Include="YAMP\Exceptions\BracketException.cs" />
+    <Compile Include="YAMP\Exceptions\DimensionException.cs" />
+    <Compile Include="YAMP\Exceptions\ExpressionNotFoundException.cs" />
+    <Compile Include="YAMP\Exceptions\FunctionNotFoundException.cs" />
+    <Compile Include="YAMP\Exceptions\MatrixFormatException.cs" />
+    <Compile Include="YAMP\Exceptions\OperationNotSupportedException.cs" />
+    <Compile Include="YAMP\Exceptions\ParseException.cs" />
+    <Compile Include="YAMP\Exceptions\RangeException.cs" />
+    <Compile Include="YAMP\Exceptions\SymbolException.cs" />
+    <Compile Include="YAMP\Exceptions\TypeNotEqualException.cs" />
+    <Compile Include="YAMP\Expressions\AbsExpression.cs" />
+    <Compile Include="YAMP\Expressions\BracketExpression.cs" />
+    <Compile Include="YAMP\Expressions\EmptyExpression.cs" />
+    <Compile Include="YAMP\Expressions\Expression.cs" />
+    <Compile Include="YAMP\Expressions\FunctionExpression.cs" />
+    <Compile Include="YAMP\Expressions\NumberExpression.cs" />
+    <Compile Include="YAMP\Expressions\SpecialExpression.cs" />
+    <Compile Include="YAMP\Expressions\StringExpression.cs" />
+    <Compile Include="YAMP\Expressions\SymbolExpression.cs" />
+    <Compile Include="YAMP\Extensions.cs" />
+    <Compile Include="YAMP\Functions\ArgumentFunction.cs" />
+    <Compile Include="YAMP\Functions\ArgumentFunctions\ClearFunction.cs" />
+    <Compile Include="YAMP\Functions\ArgumentFunctions\EyeFunction.cs" />
+    <Compile Include="YAMP\Functions\ArgumentFunctions\LinspaceFunction.cs" />
+    <Compile Include="YAMP\Functions\ArgumentFunctions\LoadFunction.cs" />
+    <Compile Include="YAMP\Functions\ArgumentFunctions\LogspaceFunction.cs" />
+    <Compile Include="YAMP\Functions\ArgumentFunctions\OnesFunction.cs" />
+    <Compile Include="YAMP\Functions\ArgumentFunctions\RandFunction.cs" />
+    <Compile Include="YAMP\Functions\ArgumentFunctions\RandiFunction.cs" />
+    <Compile Include="YAMP\Functions\ArgumentFunctions\RandnFunction.cs" />
+    <Compile Include="YAMP\Functions\ArgumentFunctions\SaveFunction.cs" />
+    <Compile Include="YAMP\Functions\ArgumentFunctions\ZerosFunction.cs" />
+    <Compile Include="YAMP\Functions\FunctionDelegate.cs" />
+    <Compile Include="YAMP\Functions\LinearAlgebra\DetFunction.cs" />
+    <Compile Include="YAMP\Functions\LinearAlgebra\EigFunction.cs" />
+    <Compile Include="YAMP\Functions\LinearAlgebra\EvFunction.cs" />
+    <Compile Include="YAMP\Functions\LinearAlgebra\InvFunction.cs" />
+    <Compile Include="YAMP\Functions\LinearAlgebra\TraceFunction.cs" />
+    <Compile Include="YAMP\Functions\LogicFunctions\IsIntFunction.cs" />
+    <Compile Include="YAMP\Functions\LogicFunctions\IsPrimeFunction.cs" />
+    <Compile Include="YAMP\Functions\Spectroscopy\FFTFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\AbsFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\CeilFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\DimFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\ExpFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\FacultyFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\FloorFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\GammaFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\HeavisideFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\LengthFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\LnFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\LogFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\MaxFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\MinFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\SignFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\SqrtFunction.cs" />
+    <Compile Include="YAMP\Functions\StandardFunctions\SumFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\ArccosFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\ArccotFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\ArcoshFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\ArcothFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\ArcsinFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\ArctanFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\ArsinhFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\ArtanhFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\CosFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\CoshFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\CotFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\CothFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\SinFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\SinhFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\TanFunction.cs" />
+    <Compile Include="YAMP\Functions\Trigonometric\TanhFunction.cs" />
+    <Compile Include="YAMP\Interfaces\IFunction.cs" />
+    <Compile Include="YAMP\Interfaces\IRegisterToken.cs" />
+    <Compile Include="YAMP\Numerics\Decompositions\CholeskyDecomposition.cs" />
+    <Compile Include="YAMP\Numerics\Decompositions\DirectSolver.cs" />
+    <Compile Include="YAMP\Numerics\Decompositions\LUDecomposition.cs" />
+    <Compile Include="YAMP\Numerics\Decompositions\QRDecomposition.cs" />
+    <Compile Include="YAMP\Numerics\Decompositions\SingularValueDecomposition.cs" />
+    <Compile Include="YAMP\Numerics\NumericHelpers.cs" />
+    <Compile Include="YAMP\Numerics\Others\Eigenvalues.cs" />
+    <Compile Include="YAMP\Numerics\Others\FFT.cs" />
+    <Compile Include="YAMP\Operators\AssigmentOperators\AssignmentOperator.cs" />
+    <Compile Include="YAMP\Operators\AssigmentOperators\AssignmentPrefixOperator.cs" />
+    <Compile Include="YAMP\Operators\AssigmentOperators\LeftDivideAssignmentOperator.cs" />
+    <Compile Include="YAMP\Operators\AssigmentOperators\MinusAssignmentOperator.cs" />
+    <Compile Include="YAMP\Operators\AssigmentOperators\MultiplyAssignmentOperator.cs" />
+    <Compile Include="YAMP\Operators\AssigmentOperators\PlusAssignmentOperator.cs" />
+    <Compile Include="YAMP\Operators\AssigmentOperators\PowerAssignmentOperator.cs" />
+    <Compile Include="YAMP\Operators\AssigmentOperators\RightDivideAssignmentOperator.cs" />
+    <Compile Include="YAMP\Operators\BinaryOperator.cs" />
+    <Compile Include="YAMP\Operators\BinaryOperators\ColonOperator.cs" />
+    <Compile Include="YAMP\Operators\BinaryOperators\CommaOperator.cs" />
+    <Compile Include="YAMP\Operators\BinaryOperators\LeftDivideOperator.cs" />
+    <Compile Include="YAMP\Operators\BinaryOperators\MinusOperator.cs" />
+    <Compile Include="YAMP\Operators\BinaryOperators\MultiplyOperator.cs" />
+    <Compile Include="YAMP\Operators\BinaryOperators\PlusOperator.cs" />
+    <Compile Include="YAMP\Operators\BinaryOperators\PowerOperator.cs" />
+    <Compile Include="YAMP\Operators\BinaryOperators\RangeOperator.cs" />
+    <Compile Include="YAMP\Operators\BinaryOperators\RightDivideOperator.cs" />
+    <Compile Include="YAMP\Operators\DotOperator.cs" />
+    <Compile Include="YAMP\Operators\DotOperators\DotLeftDivideOperator.cs" />
+    <Compile Include="YAMP\Operators\DotOperators\DotMultiplyOperator.cs" />
+    <Compile Include="YAMP\Operators\DotOperators\DotPowerOperator.cs" />
+    <Compile Include="YAMP\Operators\DotOperators\DotRightDivideOperator.cs" />
+    <Compile Include="YAMP\Operators\LogicOperator.cs" />
+    <Compile Include="YAMP\Operators\LogicOperators\EqOperator.cs" />
+    <Compile Include="YAMP\Operators\LogicOperators\GtEqOperator.cs" />
+    <Compile Include="YAMP\Operators\LogicOperators\GtOperator.cs" />
+    <Compile Include="YAMP\Operators\LogicOperators\LtEqOperator.cs" />
+    <Compile Include="YAMP\Operators\LogicOperators\LtOperator.cs" />
+    <Compile Include="YAMP\Operators\LogicOperators\NeqOperator.cs" />
+    <Compile Include="YAMP\Operators\Operator.cs" />
+    <Compile Include="YAMP\Operators\UnaryOperator.cs" />
+    <Compile Include="YAMP\Operators\UnaryOperators\AdjungateOperator.cs" />
+    <Compile Include="YAMP\Operators\UnaryOperators\FacultyOperator.cs" />
+    <Compile Include="YAMP\Operators\UnaryOperators\IndexOperator.cs" />
+    <Compile Include="YAMP\Operators\UnaryOperators\TransposeOperator.cs" />
+    <Compile Include="YAMP\Parser.cs" />
+    <Compile Include="YAMP\ParseTree.cs" />
+    <Compile Include="YAMP\Tokens.cs" />
+    <Compile Include="YAMP\Values\ArgumentsValue.cs" />
+    <Compile Include="YAMP\Values\Constants.cs" />
+    <Compile Include="YAMP\Values\MatrixValue.cs" />
+    <Compile Include="YAMP\Values\RangeValue.cs" />
+    <Compile Include="YAMP\Values\ScalarValue.cs" />
+    <Compile Include="YAMP\Values\StringValue.cs" />
+    <Compile Include="YAMP\Values\Value.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="YAMP\YAMP.pidb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="YAMP\YAMP.csproj" />
+    <Content Include="YAMP\YAMP.csproj.user" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="YAMP\Numerics\Integration\" />
+    <Folder Include="YAMP\Numerics\Interpolations\" />
+    <Folder Include="YAMP\Numerics\ODE\" />
+    <Folder Include="YAMP\Numerics\Optimization\" />
+    <Folder Include="YAMP\Numerics\Solvers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

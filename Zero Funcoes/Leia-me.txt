@@ -1,0 +1,4 @@
+Paulo Roberto Tessarolli Junior
+RA: 924113
+
+Programa de achar zero de funções através de vários métodos. Utiliza YAMP como interpretador de funções.

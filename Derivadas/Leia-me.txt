@@ -1,0 +1,4 @@
+Paulo Roberto Tessarolli Junior
+RA: 924113
+
+Programa pra calcular derivada de primeira e segunda ordem utilizando o interpretador de função YAMP.
